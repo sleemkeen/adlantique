@@ -1,0 +1,186 @@
+extends layouts/_app
+
+block vars
+	-
+		setPage({
+			
+		});
+
+block pageTitle
+	| Settings
+
+block pageHeader
+
+block content
+	.container-fluid
+		.row
+			.settings-sidebar.col-md-3
+				ul.nav.nav-tabs.flex-column
+					.nav-group-title Account
+					li.nav-item
+						a.nav-link.active(href="#personal", data-toggle="tab")
+							img.icon(src="assets/img/icons/grid.svg", alt="Personal Information", width='19')
+							span.text Personal Information
+					li.nav-item
+						a.nav-link(href="#password-tab", data-toggle="tab")
+							img.icon(src="assets/img/icons/grid.svg", alt="Password and Security", width='19')
+							span.text Password and Security
+					li.nav-item
+						a.nav-link(href="#email-tab", data-toggle="tab")
+							img.icon(src="assets/img/icons/grid.svg", alt="Email Preferences", width='19')
+							span.text Email Preferences
+
+					.nav-group-title Company
+					li.nav-item
+						a.nav-link(href="#company", data-toggle="tab")
+							img.icon(src="assets/img/icons/grid.svg", alt="Company Information", width='19')
+							span.text Company Information
+
+			.settings-main.tab-content.col-md-9
+				.tab-pane.fade#personal
+					h5.mb-5 Personal Information
+
+					form
+						.form-group
+							label(for="first_name") First Name
+							input.form-control#first_name(type="text")
+
+						.form-group
+							label(for="last_name") Last Name
+							input.form-control#last_name(type="text")
+
+						.form-group
+							label(for="email") Email
+							input.form-control#email(type="text")
+
+						.form-group
+							label(for="language") Language
+							.row
+								.col-md-4
+									select#language.select2.form-control(name="")
+										option(value="english-uk") English (United Kingdom)
+										option(value="english-us") English (United States)
+										option(value="french") French
+										option(value="spanish") Spanish
+										option(value="german") German
+
+						.mb-5
+						hr
+
+						button.btn.btn-success.rounded-pill.btn-sm(type="submit") Save
+
+				.tab-pane.fade#password-tab
+					h5.mb-5 Password and Security
+					
+					form
+						.form-group
+							label(for="current_password") Current Password
+							input#current_password.form-control(type="password")
+
+						.form-group
+							label(for="password") New Password
+							input#password.form-control(type="password")
+
+						.form-group
+							label(for="password_confirmation") Confirm New Password
+							input#password_confirmation.form-control(type="password")
+
+
+						.mb-5
+						hr
+
+						button.btn.btn-success.rounded-pill.btn-sm(type="submit") Save
+
+
+
+
+				.tab-pane.fade#email-tab
+					h5.mb-5 Email Preferences
+					
+					form
+						.custom-control-group
+							.form-group
+								.custom-control.custom-checkbox
+									input.custom-control-input#announcements(type="checkbox", checked)
+									label.custom-control-label.text-body(for="announcements") Announcements, Sales and Support
+								p.small.text-black-50.form-text.font-weight-light Events, webinars, whitepaper emails as well as direct outreach from our digital marketing specialists. Sent 2-5 times per month.
+
+							.form-group
+								.custom-control.custom-checkbox
+									input.custom-control-input#suggestions(type="checkbox", checked)
+									label.custom-control-label.text-body(for="suggestions") Customised Help and Performance Suggestions
+								p.small.text-black-50.form-text.font-weight-light Emails from within the product designed to help optimise your account. Sent 1-2 times per month.
+
+							.form-group
+								.custom-control.custom-checkbox
+									input.custom-control-input#receipts(type="checkbox", checked)
+									label.custom-control-label.text-body(for="receipts") Invoice Receipts
+								p.small.text-black-50.form-text.font-weight-light Invoice receipts with credit card charges (note: these can also be accessed in your Adlantique dashboard). Frequency on a per account basis.
+
+							.form-group
+								.custom-control.custom-checkbox
+									input.custom-control-input#notifications(type="checkbox", checked)
+									label.custom-control-label.text-body(for="notifications") Campaign and Ad Notifications
+								p.small.text-black-50.form-text.font-weight-light Information about your campaigns and ads that have been approved, disapproved or have ended. Frequency on a per account basis.
+
+						.mb-5
+						hr
+
+						button.btn.btn-success.rounded-pill.btn-sm(type="submit") Save
+
+
+
+
+				.tab-pane.fade#company
+					h5.mb-5 Company Information
+
+					form
+						.form-group
+							label(for="") Company Name
+							input.form-control(type="text")
+						.form-group
+							label(for="") Industrial Category
+							select.select2.d-block.form-control(type="text")
+								option(value="") Select Category
+
+
+						p Select Target Audience
+
+						.row
+							.col-md-6
+								.form-group
+									label(for="") Locations
+									input.form-control(type="text")
+
+								.form-group
+									label(for="") Selected Locations
+									.chips
+										.chip
+											span.text Abuja
+											span.close &times;
+										.chip
+											span.text Lagos
+											span.close &times;
+										.chip
+											span.text London
+											span.close &times;
+							.col-md-6
+								.form-group
+									label(for="") Age Group
+									selct.select2.d-block.form-control(type="text")
+										option(value="") Select Category
+
+								.form-group
+									label(for="") Selected Age Groups
+									.chips
+										.chip
+											span.text 18 - 40
+											span.close &times;
+										.chip
+											span.text 18 - 40
+											span.close &times;
+
+						.mb-5
+						hr
+
+						button.btn.btn-success.rounded-pill.btn-sm(type="submit") Save

@@ -1,0 +1,143 @@
+extends layouts/_landing
+
+block vars
+	-
+		setPage({
+			
+		});
+
+block content
+	
+	.banner.text-white(style="background-image: url('assets/img/bg/home.png')")
+		img#banner-img(src="assets/img/screens/banner.png", alt="")
+		.container
+			.banner-content
+				.row
+					.col-md-7
+						.well.mb-5
+							span.badge.bg-danger.text-white.text-uppercase New
+							span.text Learn more about new Adlantique Packages for Businesses and Career Growth
+
+						h1.font-weight-regular.mb-5 Grow your business.  Boost your sales.
+
+						p.mb-5
+							| With AdRoll Attract, you can reach new people to fuel market sales with smarter marketing that does the work for you. Tap into our wealth of shopper data to get the right customers.
+						
+						.slide-nav.mb-5
+							a.slide-nav-item.active
+							a.slide-nav-item
+							a.slide-nav-item
+
+						div
+							a.btn.rounded-pill.btn-success(href="") Sign Up
+							a.btn.rounded-pill.btn-white.ml-4(href="") Contact Sales
+
+	
+	.section
+		.container
+			.row
+				.col-md-9
+					.row
+						.col-md-4
+							.py-4.text-center
+								img.mb-4(src="assets/img/icons/magnet.png", alt="Magnet", height="65")
+								p.font-size-sm
+									| Find more of the right shoppers with ad campaigns that span across top sites, social, emails, and beyond.
+
+						.col-md-4
+							.py-4.text-center
+								img.mb-4(src="assets/img/icons/lightbulb.png", alt="Lightbulb", height="65")
+								p.font-size-sm
+									| Reconnect with shoppers you know and guide them back to your site to complete their purchases.
+
+						.col-md-4
+							.py-4.text-center
+								img.mb-4(src="assets/img/icons/shopping-cart.png", alt="Shopping Cart", height="65")
+								p.font-size-sm
+									| Advertise smarter by measuring the impact that your campaigns have on a shopper’s decision to buy.
+
+	
+	.section.text-white(style="background-image: url('assets/img/bg/section-primary.png'); background-size: 100% 100%")
+		.container
+			.row
+				.col-md-7
+					img.img-fluid(src="assets/img/screens/dashboard.png", alt="Insights That Lead to Revenue")
+
+				.col-md-5.d-flex.align-items-center
+					.w-100
+						h3 Insights That Lead to Revenue
+
+						.w-50
+							.line-horizontal.bg-white
+
+						p
+							| Advertise smarter by measuring the impact that your campaigns have on a shopper’s decision to buy. Adjust and learn from every aspect of your campaigns. 
+
+		
+
+	.section
+		.container
+			.row
+				.col-md-5.d-flex.align-items-center
+					.w-100
+						h3 Insights That Lead to Revenue
+
+						.w-50
+							.line-horizontal.my-4
+
+						p
+							| Advertise smarter by measuring the impact that your campaigns have on a shopper’s decision to buy. Adjust and learn from every aspect of your campaigns. 
+
+						p
+							a(href="javascript:") Learn about Adlantique's products 
+
+				.col-md-7
+					img.img-fluid(src="assets/img/screens/shop.png", alt="Insights That Lead to Revenue")
+		
+
+	
+	.section.text-white(style="background-image: url('assets/img/bg/section-info.png'); background-size: 100% 100%")
+		.container
+			.row
+				.col-md-7
+					img.img-fluid(src="assets/img/screens/social.png", alt="Insights That Lead to Revenue")
+		
+				.col-md-5.d-flex.align-items-center
+					.w-100
+						h3 Insights That Lead to Revenue
+
+						.w-50
+							.line-horizontal.my-4
+
+						p
+							| Advertise smarter by measuring the impact that your campaigns have on a shopper’s decision to buy. Adjust and learn from every aspect of your campaigns. 
+
+						p
+							a.text-white(href="javascript:") More about us 
+
+	
+
+	.section
+		.container
+			.row
+				.col-md-5.d-flex.align-items-center
+					.w-100
+						h3 Outdoor Ads at your Prefered locations.
+
+						.w-50
+							.line-horizontal.my-4
+
+						p
+							| Advertise smarter by measuring the impact that your campaigns have on a shopper’s decision to buy. Adjust and learn from every aspect of your campaigns. 
+
+						p
+							a.text-body(href="javascript:") Learn about Adlantique's products 
+
+				.col-md-7
+					img.img-fluid(src="assets/img/screens/billboard.png", alt="Insights That Lead to Revenue")
+		
+
+
+	
+	//- Include Get Started Section
+	include sections/_get_started

@@ -1,0 +1,40 @@
+footer.bg-lighter
+	.container
+		.row
+			.col-md-9
+				.row
+					.col-md-6
+						h5.text-secondary Adlantique &copy;
+						ul.nav.nav-social
+							for link in page.socialLinks
+								-;
+								li.nav-item
+									a.nav-link(href=link.url)
+										img(src=`assets/img/social/${link.name}.png`, alt="")
+						
+					.col-md-3
+						h6.font-size-15.text-secondary Packages
+						ul.nav.flex-column.nav-footer
+							li.nav-item
+								a.nav-link(href="javascript:") Product
+							li.nav-item
+								a.nav-link(href="javascript:") Product
+							li.nav-item
+								a.nav-link(href="javascript:") Product
+							li.nav-item
+								a.nav-link(href="javascript:") Product
+					.col-md-3
+						h6.font-size-15.text-secondary Company
+						ul.nav.flex-column.nav-footer
+							li.nav-item
+								a.nav-link(href="javascript:") FAQs
+							li.nav-item
+								a.nav-link(href="about.html") About Us
+							li.nav-item
+								a.nav-link(href="javascript:") Terms of Service
+							li.nav-item
+								a.nav-link(href="javascript:") Privacy Policy
+				
+			.col-md-3
+				p.font-size-i5.text-secondary
+					| Adlantique is an Advertising plaform  smarter by measuring the impact that your campaigns have on a shopper’s decision to buy. Adjust and learn from every aspect of your campaigns. 

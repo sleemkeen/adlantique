@@ -1,0 +1,106 @@
+extends layouts/_app
+
+block vars
+	-
+		setPage({
+			
+		});
+
+block pageTitle
+	| Purchase Bundle
+
+block pageHeader
+	a.btn.btn-success.rounded-pill.text-uppercase(href="javascript:") Buy This Bundle
+
+block content
+	.row.m-0
+		aside.col-md-3.pl-0
+			ul.nav.nav-tabs.nav-tabs-a.flex-column.text-uppercase
+				li.nav-item
+					a.nav-link.active(href="") Bundle Details
+				li.nav-item
+					a.nav-link(href="") Payment
+		.main.main-a.col-md-9
+			.row
+				.col-md-9.text-uppercase
+					.row
+						.col-md-6
+							table.table.table-borderless.table-sm
+								tbody
+									tr
+										th.text-danger profile Type :
+										td Adlantique For sme
+									tr
+										th.text-danger Bundle Type :
+										td Bronze
+									tr
+										th.text-danger Spend :
+										td ₦500,000 / Monthly
+						.col-md-6
+							p.text-danger Description:
+							p.text-muted You will not be charged a monthly service fee. The price you pay will depend on the amount of people who engage .
+
+				.col-md-3.text-right
+					.btn.btn-sm.btn-light.rounded-pill.text-uppercase.shadow-none.border-0 View Mapping
+
+			hr
+
+			.pricing-2
+				ul.nav.nav-tabs.nav-fill
+					li.nav-item
+						a.nav-link.active(href="#", data-toggle="tab", data-background-size="#pricing-2-tables", style="background-position: 0") Bronze
+					li.nav-item
+						a.nav-link(href="#", data-toggle="tab", data-background-size="#pricing-2-tables", style="background-position: 50%") silver
+					li.nav-item
+						a.nav-link(href="#", data-toggle="tab", data-background-size="#pricing-2-tables", style="background-position: 100%") Bronze
+				.tab-content.pricing-2-tables.text-center#pricing-2-tables
+					.tab-pane.pricing-2-table.active.show#bronze
+						.pricing-2-row.row(data-background-size="#pricing-2-tables")
+							.col-md-2.pricing-2-column
+								div.font-weight-700.text-uppercase SMS
+								div Up to a total limit of N100,000
+							.col-md-2.pricing-2-column
+								div.font-weight-700.text-uppercase EMAIL
+								div Limit up to N50,000
+							.col-md-2.pricing-2-column
+								div.font-weight-700.text-uppercase INSTAGRAM
+								div Max 15 sessions
+							.col-md-2.pricing-2-column
+								div.font-weight-700.text-uppercase TWITTER
+								div Max 15 sessions
+							.col-md-2.pricing-2-column
+								div.font-weight-700.text-uppercase FACEBOOK
+								div yes
+							.col-md-2.pricing-2-column
+								div.font-weight-700.text-uppercase GOOGLE ADS
+								div yes
+
+						.row
+							.col-md-10.pr-md-0
+								.pricing-2-row.row(data-background-size="#pricing-2-tables")
+									.col-md.pricing-2-column
+										div.font-weight-700.text-uppercase RADIO
+										div Up to a total limit of N100,000
+									.col-md.pricing-2-column
+										div.font-weight-700.text-uppercase TV
+										div Limit up to N50,000
+									.col-md.pricing-2-column
+										div.font-weight-700.text-uppercase PRINT
+										div Max 15 sessions
+									.col-md.pricing-2-column
+										div.font-weight-700.text-uppercase BILLBOARDS
+										div Max 15 sessions
+									.col-md.pricing-2-column
+										div.font-weight-700.text-uppercase LINKEDIN
+										div Max 15 sessions
+
+						.row
+							.col-md-4.pr-md-0
+								.pricing-2-row.row(data-background-size="#pricing-2-tables")
+									.col-12.pricing-2-column
+										span.h6.text-uppercase Total: 
+										span.h3.font-weight-bold ₦500,000
+
+			.text-uppercase
+				p.small.font-weight-500.text-danger.mb-2 Note :
+				p.text-muted You will not be charged a monthly service fee. The price you pay will depend on the amount of people who engage .

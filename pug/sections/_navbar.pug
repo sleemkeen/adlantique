@@ -1,0 +1,19 @@
+.navbar.navbar-expand-md(class=(page.transparentNavbar ? " navbar-trans" : ""))
+	.container
+		a.navbar-brand(href="index.html") Adlantique
+		button.navbar-toggler
+			span.navbar-toggler-icon
+		.navbar-collapse.collapse
+			ul.nav.navbar-nav.ml-auto
+				li.nav-item
+					a.nav-link(class=`${page.name == 'products' ? "active" : ""}`, href="products.html") Products
+				li.nav-item
+					a.nav-link(class=`${page.name == 'about' ? "active" : ""}`, href="about.html") About Us
+				li.nav-item
+					a.nav-link(class=`${page.name == 'support' ? "active" : ""}`, href="support.html") Support
+				li.nav-item
+					a.nav-link(class=`${page.name == 'register' ? "active" : ""}`, href="register.html") Sign Up
+				li.nav-item
+					a.nav-link(class=`${page.name == 'login' ? "active" : ""}`, href="login.html")
+						| Sign In
+						img.icon(src=`assets/img/icons/arrow-right-sm${page.transparentNavbar ? "-white" : ""}.svg`, alt="")

@@ -1,0 +1,140 @@
+extends layouts/_landing
+
+block vars
+	-
+		setPage({
+			name: "products",
+			title: "Adlantique Products",
+			footer: false,
+			smallFooter: true,
+		});
+
+block content
+	.banner(style="background-image: url('assets/img/bg/landing.png'); padding-bottom: 150px")
+		.container
+			.banner-content
+				.pricing
+					ul.nav.nav-tabs.nav-fill
+						li.nav-item
+							a.nav-link(href="#pay-as-you-go", data-toggle="tab") Pay As You Go
+						li.nav-item
+							a.nav-link(href="#sme", data-toggle="tab") Adlantique For sme
+						li.nav-item
+							a.nav-link(href="#co-operate", data-toggle="tab") Co-Operate
+						li.nav-item
+							a.nav-link(href="#agency", data-toggle="tab") Agency
+
+					.tab-content.pricing-tables
+						.tab-pane.fade#pay-as-you-go
+							.card.pricing-table
+								.card-body
+									h6.font-weight-900.letter-spacing-sm.text-uppercase Get Access to advertise on various platform at a go
+
+									p.mb-5
+										| Last year, we found the vast majority of marketers are familiar with running programmatic campaigns. Last year, we found the vast majority of marketers are familiar with running programmatic campaigns.
+
+									p.text-uppercase.mb-1.font-weight-600.letter-spacing-sm Minimum Daily spend Price:
+									p.mb-3
+										span.h1.font-weight-900 500,000
+										span.h5.font-weight-900 ₦
+
+									p.font-weight-600 Benefits
+									.row
+										.col-auto
+											ul.ul
+												li Facebook Ads 
+												li Dedicated Onboarding Support
+												li Online Support/Help Center
+												li Dynamic Ads
+										.col-auto
+											ul.ul
+												li LinkedIn Ads
+												li Complementary Ad Creative
+												li Strategic Meetings
+												li Twitter Ads
+									a.pricing-button(href="javascript:")
+										img.icon(src="assets/img/icons/arrow-right-sm.svg", alt="SME BRASS")
+						.tab-pane.fade#sme
+							.row
+								.col-md-4.card.pricing-table
+									.card-body
+										h6.font-weight-900.letter-spacing-sm.text-uppercase SME BRASS
+
+										p.mb-5
+											| Last year, we found the vast majority of marketers are familiar with running programmatic campaigns. Last year, we found the vast majority of marketers are familiar with running programmatic campaigns.
+
+										p.text-uppercase.mb-1.font-weight-600.letter-spacing-sm Package Price
+										p.mb-3
+											span.h1.font-weight-900 500,000
+											span.h5.font-weight-900 ₦
+
+										p.font-weight-600 Benefits
+										ul.ul
+											li Facebook Ads 
+											li Dedicated Onboarding Support
+											li Online Support/Help Center
+											li Dynamic Ads
+											li LinkedIn Ads
+											li Complementary Ad Creative
+											li Strategic Meetings
+											li Twitter Ads
+										a.pricing-button(href="javascript:")
+											img.icon(src="assets/img/icons/arrow-right-sm.svg", alt="SME BRASS")
+
+
+								.col-md-4.card.pricing-table
+									.card-body
+										h6.font-weight-900.letter-spacing-sm.text-uppercase SME BRONZE
+
+										p.mb-5
+											| Last year, we found the vast majority of marketers are familiar with running programmatic campaigns. Last year, we found the vast majority of marketers are familiar with running programmatic campaigns.
+
+										p.text-uppercase.mb-1.font-weight-600.letter-spacing-sm Package Price
+										p.mb-3
+											span.h1.font-weight-900 500,000
+											span.h5.font-weight-900 ₦
+
+										p.font-weight-600 Benefits
+										ul.ul
+											li Facebook Ads 
+											li Dedicated Onboarding Support
+											li Online Support/Help Center
+											li Dynamic Ads
+											li LinkedIn Ads
+											li Complementary Ad Creative
+											li Strategic Meetings
+											li Twitter Ads
+										a.pricing-button(href="javascript:")
+											img.icon(src="assets/img/icons/arrow-right-sm.svg", alt="SME BRONZE")
+
+
+								.col-md-4.card.pricing-table.special
+									.card-body
+										h3.font-weight-900.letter-spacing-sm.text-uppercase SME SILVER
+
+										p.mb-5
+											| Last year, we found the vast majority of marketers are familiar with running programmatic campaigns. Last year, we found the vast majority of marketers are familiar with running programmatic campaigns.
+
+										p.text-uppercase.mb-1.font-weight-600.letter-spacing-sm Package Price
+										p.mb-3
+											span.h1.font-weight-900 500,000
+											span.h5.font-weight-900 ₦
+
+										p.font-weight-600 Benefits
+										ul.ul
+											li Facebook Ads 
+											li Dedicated Onboarding Support
+											li Online Support/Help Center
+											li Dynamic Ads
+											li LinkedIn Ads
+											li Complementary Ad Creative
+											li Strategic Meetings
+											li Twitter Ads
+										a.pricing-button(href="javascript:")
+											img.icon(src="assets/img/icons/arrow-right-sm.svg", alt="SME SILVER")
+
+block js
+	script
+		| window.adlantique = {
+		|	page: "#{page.name}"
+		|}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Adlantique</title>
+    <link rel="stylesheet" href="./vendors/select2/css/select2.min.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body id="app">
+    <div class="navbar navbar-expand-md">
+      <div class="container-fluid app-container"><a class="navbar-brand" href="">Adlantique</a>
+        <button class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav ml-md-5">
+            <li class="nav-item"><a class="nav-link" href="campaigns.html">Campaigns</a></li>
+            <li class="nav-item"><a class="nav-link" href="my-ads.html">My Ads</a></li>
+            <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+          </ul>
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="">Hi Adeyemi,</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-icon" href="javscript:"><img class="icon" src="assets/img/icons/bell.svg" alt="" width="30"/></a></li>
+            <li class="nav-item"><a class="nav-link nav-link-icon" href="settings.html"><img class="icon" src="assets/img/icons/cog.svg" alt="" width="30"/></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page-header app-container">
+      <div class="page-title">Settings
+      </div>
+      <div class="page-header-text">
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="settings-sidebar col-md-3">
+          <ul class="nav nav-tabs flex-column">
+            <div class="nav-group-title">Account</div>
+            <li class="nav-item"><a class="nav-link active" href="#personal" data-toggle="tab"><img class="icon" src="assets/img/icons/grid.svg" alt="Personal Information" width="19"/><span class="text">Personal Information</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#password-tab" data-toggle="tab"><img class="icon" src="assets/img/icons/grid.svg" alt="Password and Security" width="19"/><span class="text">Password and Security</span></a></li>
+            <li class="nav-item"><a class="nav-link" href="#email-tab" data-toggle="tab"><img class="icon" src="assets/img/icons/grid.svg" alt="Email Preferences" width="19"/><span class="text">Email Preferences</span></a></li>
+            <div class="nav-group-title">Company</div>
+            <li class="nav-item"><a class="nav-link" href="#company" data-toggle="tab"><img class="icon" src="assets/img/icons/grid.svg" alt="Company Information" width="19"/><span class="text">Company Information</span></a></li>
+          </ul>
+        </div>
+        <div class="settings-main tab-content col-md-9">
+          <div class="tab-pane fade" id="personal">
+            <h5 class="mb-5">Personal Information</h5>
+            <form>
+              <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input class="form-control" id="first_name" type="text"/>
+              </div>
+              <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input class="form-control" id="last_name" type="text"/>
+              </div>
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" id="email" type="text"/>
+              </div>
+              <div class="form-group">
+                <label for="language">Language</label>
+                <div class="row">
+                  <div class="col-md-4">
+                    <select class="select2 form-control" id="language" name="">
+                      <option value="english-uk">English (United Kingdom)</option>
+                      <option value="english-us">English (United States)</option>
+                      <option value="french">French</option>
+                      <option value="spanish">Spanish</option>
+                      <option value="german">German</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-5"></div>
+              <hr/>
+              <button class="btn btn-success rounded-pill btn-sm" type="submit">Save</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="password-tab">
+            <h5 class="mb-5">Password and Security</h5>
+            <form>
+              <div class="form-group">
+                <label for="current_password">Current Password</label>
+                <input class="form-control" id="current_password" type="password"/>
+              </div>
+              <div class="form-group">
+                <label for="password">New Password</label>
+                <input class="form-control" id="password" type="password"/>
+              </div>
+              <div class="form-group">
+                <label for="password_confirmation">Confirm New Password</label>
+                <input class="form-control" id="password_confirmation" type="password"/>
+              </div>
+              <div class="mb-5"></div>
+              <hr/>
+              <button class="btn btn-success rounded-pill btn-sm" type="submit">Save</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="email-tab">
+            <h5 class="mb-5">Email Preferences</h5>
+            <form>
+              <div class="custom-control-group">
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="announcements" type="checkbox" checked="checked"/>
+                    <label class="custom-control-label text-body" for="announcements">Announcements, Sales and Support</label>
+                  </div>
+                  <p class="small text-black-50 form-text font-weight-light">Events, webinars, whitepaper emails as well as direct outreach from our digital marketing specialists. Sent 2-5 times per month.</p>
+                </div>
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="suggestions" type="checkbox" checked="checked"/>
+                    <label class="custom-control-label text-body" for="suggestions">Customised Help and Performance Suggestions</label>
+                  </div>
+                  <p class="small text-black-50 form-text font-weight-light">Emails from within the product designed to help optimise your account. Sent 1-2 times per month.</p>
+                </div>
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="receipts" type="checkbox" checked="checked"/>
+                    <label class="custom-control-label text-body" for="receipts">Invoice Receipts</label>
+                  </div>
+                  <p class="small text-black-50 form-text font-weight-light">Invoice receipts with credit card charges (note: these can also be accessed in your Adlantique dashboard). Frequency on a per account basis.</p>
+                </div>
+                <div class="form-group">
+                  <div class="custom-control custom-checkbox">
+                    <input class="custom-control-input" id="notifications" type="checkbox" checked="checked"/>
+                    <label class="custom-control-label text-body" for="notifications">Campaign and Ad Notifications</label>
+                  </div>
+                  <p class="small text-black-50 form-text font-weight-light">Information about your campaigns and ads that have been approved, disapproved or have ended. Frequency on a per account basis.</p>
+                </div>
+              </div>
+              <div class="mb-5"></div>
+              <hr/>
+              <button class="btn btn-success rounded-pill btn-sm" type="submit">Save</button>
+            </form>
+          </div>
+          <div class="tab-pane fade" id="company">
+            <h5 class="mb-5">Company Information</h5>
+            <form>
+              <div class="form-group">
+                <label for="">Company Name</label>
+                <input class="form-control" type="text"/>
+              </div>
+              <div class="form-group">
+                <label for="">Industrial Category</label>
+                <select class="select2 d-block form-control" type="text">
+                  <option value="">Select Category</option>
+                </select>
+              </div>
+              <p>Select Target Audience</p>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Locations</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Selected Locations</label>
+                    <div class="chips">
+                      <div class="chip"><span class="text">Abuja</span><span class="close">&times;</span></div>
+                      <div class="chip"><span class="text">Lagos</span><span class="close">&times;</span></div>
+                      <div class="chip"><span class="text">London</span><span class="close">&times;</span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Age Group</label>
+                    <selct class="select2 d-block form-control" type="text">
+                      <option value="">Select Category</option>
+                    </selct>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Selected Age Groups</label>
+                    <div class="chips">
+                      <div class="chip"><span class="text">18 - 40</span><span class="close">&times;</span></div>
+                      <div class="chip"><span class="text">18 - 40</span><span class="close">&times;</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-5"></div>
+              <hr/>
+              <button class="btn btn-success rounded-pill btn-sm" type="submit">Save</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./vendors/jquery/dist/jquery.min.js"></script>
+    <script src="./vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/adlantique-dist.js"></script>
+    <script src="./vendors/select2/js/select2.min.js"></script>
+  </body>
+</html>

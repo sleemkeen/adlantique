@@ -1,0 +1,48 @@
+include ../_config.pug
+
+block vars
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		//- M<eta Tags
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+		//- Page Title
+		title #{page.title}
+
+		//- Links
+		each link in page.links
+			-;
+			link(rel="stylesheet", href=link.url)
+
+		//- Style Tags
+		block css
+
+	body(class=page.fixedNavbar ? "fixed-navbar" : "")
+		//- Include Navbar
+		if page.navbar
+			-;
+			include ../sections/_navbar.pug
+
+		//- Include Content
+		block content
+
+		//- Include Footer
+		if page.footer
+			-;
+			include ../sections/_footer.pug
+
+		//- Include Small Footer
+		if page.smallFooter
+			-;
+			include ../sections/_small_footer.pug
+
+		//- JavaScript
+		each script in page.scripts
+			-;
+			script(src=script.url)
+
+		//- Script Tags
+		block js

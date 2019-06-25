@@ -1,0 +1,59 @@
+extends layouts/_landing
+
+block vars
+	-
+		setPage({
+			name: "support",
+			title: "Adlantique Support",
+			fixedNavbar: false,
+			transparentNavbar: false
+		});
+
+block content
+	
+	.section.bg-gradient-primary.text-white
+		.container
+			.banner-content
+				.row
+					.col-md-8.mx-auto.text-center
+						h1.mb-3 What would you like to find out?
+						p.mb-5.letter-spacing-sm Find new information, Find new information, Find new informationFind new information.
+						
+						.form-group
+							.input-group.rounded-pill
+								span.input-group-prepend
+									span.input-group-text.border-0.bg-white
+										img(src="assets/img/icons/search.svg", alt="", width="15")
+								input.form-control.border-0
+
+	.section
+		.container
+			.row.text-center
+				.col-md-3
+					a.d-block.py-5
+						img.img-fluid.mb-4(src="assets/img/icons/account.svg", alt="account")
+						h6.font-weight-light My Account
+				.col-md-3
+					a.d-block.py-5
+						img.img-fluid.mb-4(src="assets/img/icons/cash.svg", alt="cash")
+						h6.font-weight-light Charges &amp; Refunds
+				.col-md-3
+					a.d-block.py-5
+						img.img-fluid.mb-4(src="assets/img/icons/download-circle.svg", alt="download")
+						h6.font-weight-light Payouts
+				.col-md-3
+					a.d-block.py-5
+						img.img-fluid.mb-4(src="assets/img/icons/tabs.svg", alt="tabs")
+						h6.font-weight-light Connect
+				.col-md-3
+					a.d-block.py-5
+						img.img-fluid.mb-4(src="assets/img/icons/calendar-cycle.svg", alt="calendar")
+						h6.font-weight-light Billings 
+				.col-md-3
+					a.d-block.py-5
+						img.img-fluid.mb-4(src="assets/img/icons/globe.svg", alt="globe")
+						h6.font-weight-light International
+
+
+	//- Include Get Started Section
+	include sections/_get_started

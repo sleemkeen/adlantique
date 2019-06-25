@@ -1,0 +1,49 @@
+extends layouts/_app
+
+block vars
+	-
+		setPage({
+			name: "reports",
+			title: "Reports"
+		});
+
+		
+block pageTitle
+	| REPORTS
+
+block pageHeader
+	div.font-size-sm Need some help? Contact us at
+	div.font-size-sm support@Adlantique.com
+
+block content
+	.app-container.py-3
+		table.table.table-striped.text-center
+			thead
+				tr
+					td Campaigns Title
+					td Uploaded Date
+					td Recieving Email
+					td(align="right") ACTION
+			tbody
+				tr
+					td Untitled
+					td 04-08-19
+					td.text-danger Holargrpher@gmail.com
+					td(align="right")
+						button.btn.btn-success.btn-sm Download
+						span.dropdown
+							button.btn.btn-outline-success.btn-sm.dropdown-toggle(data-toggle="dropdown")
+							ul.dropdown-menu
+								a.dropdown-item Some Action
+								a.dropdown-item Another Action
+				tr
+					td Untitled
+					td 04-08-19
+					td.text-danger Holargrpher@gmail.com
+					td(align="right")
+						button.btn.btn-success.btn-sm Download
+						span.dropdown
+							button.btn.btn-outline-success.btn-sm.dropdown-toggle(data-toggle="dropdown")
+							ul.dropdown-menu
+								a.dropdown-item Some Action
+								a.dropdown-item Another Action

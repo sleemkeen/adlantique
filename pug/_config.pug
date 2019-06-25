@@ -1,0 +1,48 @@
+-
+	var 
+		page = {
+			// Page Title
+			title: "Adlantique",
+
+			// Page Name
+			name: "home",
+
+			// Display Navbar
+			navbar: true,
+
+			// Transparent Navbar
+			transparentNavbar: true,
+
+			// Fixed Navigation
+			fixedNavbar: true,
+
+			// Display Footer
+			footer: true,
+
+			// Style Links
+			links: [
+				{url: "/assets/css/main.css"}
+			],
+
+			// Script Tags
+			scripts: [
+				{url: "./vendors/jquery/dist/jquery.min.js"},
+				{url: "./vendors/bootstrap/dist/js/bootstrap.bundle.min.js"},
+				{url: "./assets/js/adlantique-dist.js"}
+			],
+			
+			// Footer Links
+			socialLinks: [
+				{url: "", icon: "", name: "facebook"},
+				{url: "", icon: "", name: "instagram"},
+				{url: "", icon: "", name: "twitter"},
+				{url: "", icon: "", name: "linkedin"},
+			]
+		}
+
+		function setPage (data) {
+			for (key in data) {
+				value = data[key];
+				page[key] = value;
+			}
+		}

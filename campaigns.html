@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Campaigns</title>
+    <link rel="stylesheet" href="./vendors/select2/css/select2.min.css"/>
+    <link rel="stylesheet" href="/assets/css/main.css"/>
+  </head>
+  <body id="app">
+    <div class="navbar navbar-expand-md">
+      <div class="container-fluid app-container"><a class="navbar-brand" href="">Adlantique</a>
+        <button class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav ml-md-5">
+            <li class="nav-item"><a class="nav-link" href="campaigns.html">Campaigns</a></li>
+            <li class="nav-item"><a class="nav-link" href="my-ads.html">My Ads</a></li>
+            <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+          </ul>
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="">Hi Adeyemi,</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-icon" href="javscript:"><img class="icon" src="assets/img/icons/bell.svg" alt="" width="30"/></a></li>
+            <li class="nav-item"><a class="nav-link nav-link-icon" href="settings.html"><img class="icon" src="assets/img/icons/cog.svg" alt="" width="30"/></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page-header app-container">
+      <div class="page-title">CAMPAIGNS
+      </div>
+      <div class="page-header-text">
+      </div>
+    </div>
+    <div class="app-container py-3">
+      <div class="campains">
+        <form class="form-inline filters mb-5">
+          <div class="mr-2">
+            <select class="select2" id="channel" name="">
+              <option value="">Channel: All</option>
+            </select>
+          </div>
+          <div class="mr-2">
+            <select class="select2" id="type" name="">
+              <option value="">Type: All</option>
+            </select>
+          </div>
+          <div class="mr-2">
+            <select class="select2" id="status" name="">
+              <option value="">Status: All</option>
+            </select>
+          </div>
+          <div class="mr-2">
+            <div class="input-group"><span class="input-group-prepend"><span class="input-group-text bg-transparent border-right-0 px-2"><img src="assets/img/icons/search.svg" alt="" width="15"/></span></span>
+              <input class="form-control border-left-0 pl-0" type="text" placeholder="Campaigns: All"/>
+            </div>
+          </div>
+        </form>
+        <h6 class="text-danger text-uppercase mb-4">Twitter Campaigns</h6>
+        <table class="table mb-5">
+          <thead>
+            <tr>
+              <th><span class="checkbox">
+                  <input class="checkbox-input" id="check-1" type="checkbox" name=""/>
+                  <label class="checkbox-label" for="check-1"></label></span></th>
+              <th>Campaigns Title</th>
+              <th>Impressions</th>
+              <th>CTR</th>
+              <th>Spend</th>
+              <th>Conversions</th>
+              <th>CPA</th>
+              <th>CPM</th>
+              <th>CPC</th>
+              <th>Clicks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="checkbox">
+                  <input class="checkbox-input" id="check-2" type="checkbox" name=""/>
+                  <label class="checkbox-label" for="check-2"></label></span></td>
+              <td>Untitled</td>
+              <td>0</td>
+              <td>-</td>
+              <td>$0.00</td>
+              <td>0.0</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><span class="checkbox">
+                  <input class="checkbox-input" id="check-3" type="checkbox" name=""/>
+                  <label class="checkbox-label" for="check-3"></label></span></td>
+              <td>Untitled</td>
+              <td>0</td>
+              <td>-</td>
+              <td>$0.00</td>
+              <td>0.0</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><span class="checkbox">
+                  <input class="checkbox-input" id="check-4" type="checkbox" name=""/>
+                  <label class="checkbox-label" for="check-4"></label></span></td>
+              <td>Untitled</td>
+              <td>0</td>
+              <td>-</td>
+              <td>$0.00</td>
+              <td>0.0</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+        <h6 class="text-danger text-uppercase mb-4">Facebook Campaigns</h6>
+        <table class="table mb-5">
+          <thead>
+            <tr>
+              <th><span class="checkbox">
+                  <input class="checkbox-input" id="check-5" type="checkbox" name=""/>
+                  <label class="checkbox-label" for="check-5"></label></span></th>
+              <th>Campaigns Title</th>
+              <th>Impressions</th>
+              <th>CTR</th>
+              <th>Spend</th>
+              <th>Conversions</th>
+              <th>CPA</th>
+              <th>CPM</th>
+              <th>CPC</th>
+              <th>Clicks</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="checkbox">
+                  <input class="checkbox-input" id="check-6" type="checkbox" name=""/>
+                  <label class="checkbox-label" for="check-6"></label></span></td>
+              <td>Untitled</td>
+              <td>0</td>
+              <td>-</td>
+              <td>$0.00</td>
+              <td>0.0</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><span class="checkbox">
+                  <input class="checkbox-input" id="check-7" type="checkbox" name=""/>
+                  <label class="checkbox-label" for="check-7"></label></span></td>
+              <td>Untitled</td>
+              <td>0</td>
+              <td>-</td>
+              <td>$0.00</td>
+              <td>0.0</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>0</td>
+            </tr>
+            <tr>
+              <td><span class="checkbox">
+                  <input class="checkbox-input" id="check-8" type="checkbox" name=""/>
+                  <label class="checkbox-label" for="check-8"></label></span></td>
+              <td>Untitled</td>
+              <td>0</td>
+              <td>-</td>
+              <td>$0.00</td>
+              <td>0.0</td>
+              <td>-</td>
+              <td>-</td>
+              <td>-</td>
+              <td>0</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="./vendors/jquery/dist/jquery.min.js"></script>
+    <script src="./vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/adlantique-dist.js"></script>
+    <script src="./vendors/select2/js/select2.min.js"></script>
+  </body>
+</html>

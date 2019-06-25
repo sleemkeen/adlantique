@@ -1,0 +1,84 @@
+extends layouts/_landing
+
+block vars
+	-
+		setPage({
+			name: "about",
+			title: "About Adlantique",
+			fixedNavbar: false,
+			transparentNavbar: false
+		});
+
+block content
+	
+	.section.bg-gradient-primary.text-white
+		.container
+			.banner-content
+				.row
+					.col-md-8.mx-auto.text-center
+						h1.mb-3 Get to know us better 
+						p.mb-5.letter-spacing-sm Find new customers, sell more stuff, advertise smarter, and become a bigger brand.
+						p
+							button.btn.btn-success.rounded-pill Get Started
+
+	.section
+		.container
+			.row
+				.col-md-10.mx-auto.text-center
+					.section-title Launch your first campaign in minutes
+					p 
+					| Launch your first campaign in minutes With our account setup, it’s easier to create ads from scratch, integrate your marketing tools, deploy campaigns, and more.
+
+			.row.text-center
+				.col-md-4
+					.py-5
+						img.img-fluid.mb-3(src="assets/img/icons/chart.svg", alt="Chart")
+						div Our customers
+						div.font-weight-bold average 5x return
+						div on their advertising spend.
+				.col-md-4
+					.py-5
+						img.img-fluid.mb-3(src="assets/img/icons/revenue.svg", alt="Revenue")
+						div We’ve generated over
+						div.font-weight-bold 10 million conversions
+						div for customers
+				.col-md-4
+					.py-5
+						img.img-fluid.mb-3(src="assets/img/icons/money.svg", alt="Money")
+						div Our customers make
+						div.font-weight-bold $246 billion in sales
+						div each year
+
+	.section
+		.container
+			.row.mb-5.pb-5
+				.col-md-6.order-md-2
+					img.img-fluid(src="assets/img/icons/why-1.svg", alt="Why Us?")
+				.col-md-6.order-md-1
+					h3 Always be one click away
+					.w-50
+						.line-horizontal.bg-gradient-primary
+					p Reach your target audiences on top sites, social networks, personalized email, and beyond. AdRoll campaigns run across desktop and mobile inventory on Google, Facebook, Instagram, Yahoo, AppNexus, OpenX, and 500+ leading networks and exchanges.
+
+			.row.my-5.py-5
+				.col-md-6
+					img.img-fluid(src="assets/img/icons/why-2.svg", alt="Why Us?")
+				.col-md-6
+					h3 Always keep selling
+					.w-50
+						.line-horizontal.bg-gradient-primary
+					p Reach your target audiences on top sites, social networks, personalized email, and beyond. AdRoll campaigns run across desktop and mobile inventory on Google, Facebook, Instagram, Yahoo, AppNexus, OpenX, and 500+ leading networks and exchanges.
+
+	.section
+		.container
+			.row.text-center
+				.col-md-10.mx-auto
+					.section-title We  are all about Advertising
+			.text-center
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				p Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+
+	//- Include Get Started Section
+	include sections/_get_started

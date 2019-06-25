@@ -1,0 +1,160 @@
+extends layouts/_app
+
+block vars
+	-
+		setPage({
+			name: "campaigns",
+			title: "Campaigns"
+		});
+
+		
+block pageTitle
+	| CAMPAIGNS
+	
+block pageHeader
+
+block content
+	.app-container.py-3
+		.campains
+			form.form-inline.filters.mb-5
+				.mr-2
+					select#channel.select2(name="")
+						option(value="") Channel: All
+				.mr-2
+					select#type.select2(name="")
+						option(value="") Type: All
+				.mr-2
+					select#status.select2(name="")
+						option(value="") Status: All
+				.mr-2
+					.input-group
+						span.input-group-prepend
+							span.input-group-text.bg-transparent.border-right-0.px-2
+								img(src="assets/img/icons/search.svg", alt="", width="15")
+						input.form-control.border-left-0.pl-0(type="text", placeholder="Campaigns: All")
+
+			h6.text-danger.text-uppercase.mb-4 Twitter Campaigns
+
+			table.table.mb-5
+				thead
+					tr
+						th
+							span.checkbox
+								input#check-1.checkbox-input(type="checkbox", name="")
+								label.checkbox-label(for="check-1")
+						th Campaigns Title
+						th Impressions
+						th CTR
+						th Spend
+						th Conversions
+						th CPA
+						th CPM
+						th CPC
+						th Clicks
+				tbody
+					tr
+						td
+							span.checkbox
+								input#check-2.checkbox-input(type="checkbox", name="")
+								label.checkbox-label(for="check-2")
+						td Untitled
+						td 0
+						td -
+						td $0.00
+						td 0.0
+						td -
+						td -
+						td -
+						td 0
+					tr
+						td
+							span.checkbox
+								input#check-3.checkbox-input(type="checkbox", name="")
+								label.checkbox-label(for="check-3")
+						td Untitled
+						td 0
+						td -
+						td $0.00
+						td 0.0
+						td -
+						td -
+						td -
+						td 0
+					tr
+						td
+							span.checkbox
+								input#check-4.checkbox-input(type="checkbox", name="")
+								label.checkbox-label(for="check-4")
+						td Untitled
+						td 0
+						td -
+						td $0.00
+						td 0.0
+						td -
+						td -
+						td -
+						td 0
+
+			h6.text-danger.text-uppercase.mb-4 Facebook Campaigns
+
+			table.table.mb-5
+				thead
+					tr
+						th
+							span.checkbox
+								input#check-5.checkbox-input(type="checkbox", name="")
+								label.checkbox-label(for="check-5")
+						th Campaigns Title
+						th Impressions
+						th CTR
+						th Spend
+						th Conversions
+						th CPA
+						th CPM
+						th CPC
+						th Clicks
+				tbody
+					tr
+						td
+							span.checkbox
+								input#check-6.checkbox-input(type="checkbox", name="")
+								label.checkbox-label(for="check-6")
+						td Untitled
+						td 0
+						td -
+						td $0.00
+						td 0.0
+						td -
+						td -
+						td -
+						td 0
+					tr
+						td
+							span.checkbox
+								input#check-7.checkbox-input(type="checkbox", name="")
+								label.checkbox-label(for="check-7")
+						td Untitled
+						td 0
+						td -
+						td $0.00
+						td 0.0
+						td -
+						td -
+						td -
+						td 0
+					tr
+						td
+							span.checkbox
+								input#check-8.checkbox-input(type="checkbox", name="")
+								label.checkbox-label(for="check-8")
+						td Untitled
+						td 0
+						td -
+						td $0.00
+						td 0.0
+						td -
+						td -
+						td -
+						td 0
+
+		

@@ -1,0 +1,71 @@
+extends layouts/_landing
+
+block vars
+	-
+		setPage({
+			name: "about",
+			title: "About Adlantique",
+			footer: false,
+			smallFooter: true,
+		});
+
+block content
+	.banner.text-white(style="background-image: url('assets/img/bg/landing.png'); padding-bottom: 150px")
+		.container
+			.banner-content
+				.row
+					.col-md-5
+						img.img-fluid.mb-3(src="assets/img/icons/web.png", alt="Register With Adlantique", style="max-width: 350px")
+						h3.font-weight-900.text-uppercase Connect with  billions of potential CUSTOMERS
+						p.mb-5.pb-4.small.font-weight-light Last year, we found the vast majority of marketers are familiar with running programmatic campaigns. Last year, we found the vast majority of marketers are familiar with running programmatic campaigns.
+						.small: .small.font-weight-600.text-uppercase ˜Adlantique˜
+					.col-md-6.ml-auto
+						h3 EXPERIENCE  ADLANTIQUE
+						form.font-size-10
+							.form-group
+								.input-group.rounded-pill
+									label.mb-0.input-group-prepend(for="account")
+										span.input-group-text.border-0
+											img(src="assets/img/icons/exclamation.svg", alt="", width="15")
+									select#account.custom-select.text-center.border-0
+										option(value="") Select Account Type
+										option(value="") Pay As You Go
+										option(value="") Adlantique For SME
+										option(value="") Co-Operate
+										option(value="") Agency
+							.row
+								.col-md-6
+									.form-group
+										label(for="") First Name
+										input.form-control.rounded-pill.border-0(type="text")
+								.col-md-6
+									.form-group
+										label(for="") Last Name
+										input.form-control.rounded-pill.border-0(type="text")
+							.row
+								.col-md-6
+									.form-group
+										label(for="") Email
+										input.form-control.rounded-pill.border-0(type="text")
+								.col-md-6
+									.form-group
+										label(for="") Phone Number
+										input.form-control.rounded-pill.border-0(type="text")
+							.row
+								.col-md-6
+									.form-group
+										label(for="") Password
+										input.form-control.rounded-pill.border-0(type="password")
+								.col-md-6
+									.form-group
+										label(for="") Confirm Password
+										input.form-control.rounded-pill.border-0(type="password")
+
+							p.py-2.text-center By submitting this form, you accept our Terms of Service.
+
+							.form-group
+								button.btn.btn-success.btn-block.text-uppercase.rounded-pill.font-weight-600(type="submit") CREATE ACCOUNT
+
+							p.text-center: a.text-white(href="javascript:") 
+								| Already have an account? 
+								b.font-weight-700 Sign in.

@@ -1,0 +1,46 @@
+include ../_config.pug
+
+-
+	page.links.unshift({url: "./vendors/select2/css/select2.min.css"});
+	page.scripts.push({url: "./vendors/select2/js/select2.min.js"});
+
+block vars
+
+<!DOCTYPE html>
+html(lang="en")
+	head
+		//- M<eta Tags
+		meta(charset="UTF-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1.0")
+
+		//- Page Title
+		title #{page.title}
+
+		//- Links
+		each link in page.links
+			-;
+			link(rel="stylesheet", href=link.url)
+
+		//- Style Tags
+		block css
+
+	body#app
+		//- Include Navbar
+		include ../sections/app/_navbar.pug
+
+		.page-header.app-container
+			.page-title
+				block pageTitle
+			.page-header-text
+				block pageHeader
+
+		//- Include Content
+		block content
+
+		//- JavaScript
+		each script in page.scripts
+			-;
+			script(src=script.url)
+
+		//- Script Tags
+		block js
