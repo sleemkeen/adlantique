@@ -10847,36 +10847,41 @@ label {
   display: block;
 }
 
-.custom-control .custom-control-label {
+.custom-checkbox {
   cursor: pointer;
 }
 
-.custom-control .custom-control-label:before {
+.custom-checkbox .custom-control-label:before {
   border-radius: 2px;
   top: 0.19rem;
 }
 
-.custom-control .custom-control-label:after {
+.custom-checkbox .custom-control-label:after {
   top: 0.19rem;
 }
 
-.custom-control .custom-control-input:checked ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
   background-color: #3ECF8E;
   border-color: #3ECF8E;
 }
 
-.custom-control .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
+.custom-checkbox .custom-control-input:focus:not(:checked) ~ .custom-control-label::before {
   border-color: #3ECF8E;
   -webkit-box-shadow: 0 0 0 0.2rem rgba(62, 207, 142, 0.25);
   box-shadow: 0 0 0 0.2rem rgba(62, 207, 142, 0.25);
 }
 
-.custom-control-group .custom-control-label {
+.custom-checkbox-group .custom-control-label {
   padding-left: 1rem;
 }
 
-.custom-control-group .form-text {
+.custom-checkbox-group .form-text {
   padding-left: 2.5rem;
+}
+
+.form-section {
+  border-bottom: 1px solid  #ddd;
+  padding: 2rem;
 }
 
 .input-group.rounded-pill {
@@ -10921,6 +10926,8 @@ label {
   border-radius: 0.25rem;
   display: inline-block;
   font-size: 12px;
+  margin-bottom: 7px;
+  margin-right: 2.5px;
   padding: 4px 20px;
   padding-right: 30px;
   position: relative;

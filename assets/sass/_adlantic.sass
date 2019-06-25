@@ -166,9 +166,9 @@ select
 			&:after
 				display: block
 			
-.custom-control
+.custom-checkbox
+	cursor: pointer
 	.custom-control-label
-		cursor: pointer
 		&:before
 			border-radius: 2px
 			top: 0.19rem
@@ -188,6 +188,10 @@ select
 			padding-left: 1rem
 		.form-text
 			padding-left: 2.5rem
+
+.form-section
+	border-bottom: 1px solid  #ddd
+	padding: 2rem
 
 // ===============================================================================================================
 // Input Group
@@ -239,6 +243,8 @@ select
 	border-radius: $input-border-radius
 	display: inline-block
 	font-size: 12px
+	margin-bottom: 7px
+	margin-right: 2.5px
 	padding: 4px 20px
 	padding-right: 30px
 	position: relative
