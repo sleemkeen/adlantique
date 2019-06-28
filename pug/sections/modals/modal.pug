@@ -1,0 +1,55 @@
+.modal.setip-modal.fade
+    .modal-dialog
+        .alert.alert-danger.text-center Welcome, kindly fill the forms below to setup a company
+        .modal-content
+            .modal-body.tab-content
+                .modal-nav.mb-4
+                    ul.nav.nav-pills.nav-fill
+                        li.nav-item
+                            a.nav-link.active(href="#company", data-toggle="tab") Company Profile
+                        li.nav-item
+                            a.nav-link(href="#audience", data-toggle="tab") Target Audience
+                .tab-pane.fade.active.show#company
+                    form
+                        label Agent Name
+                        .row
+                            .col-md-6
+                                .form-group
+                                    input.form-control(type="text", placeholder="First Name")
+                            .col-md-6
+                                .form-group
+                                    input.form-control(type="text", placeholder="Last Name")
+
+                        .row
+                            .col-md-6
+                                .form-group
+                                    label(for="") Size of organization
+                                    select.select2.custom-select.d-block.form-control(style="width: 100%")
+                                        option(value="") 0-50
+                                        option(value="") 50-100
+                                        option(value="") 100-150
+                                        option(value="") 200-500
+                                        option(value="") 500+
+                            .col-md-6
+                                .form-group
+                                    label(for="") Email
+                                    input.form-control(type="email", placeholder="Holar******@gmail.com")
+
+                .tab-pane.fade#audience
+                    form
+                        label Select Target Audience
+                        
+                        .row
+                            .col-md-6
+                                .form-group
+                                    label Locations
+                                    input.form-control(type="text")
+                            .col-md-6
+                                .form-group
+                                    label Age Group
+                                    select.select2.custom-select.d-block.form-control(style="width: 100%")
+                                        option(value="") Select catergory
+
+            .modal-footer
+                a.btn.btn-link.text-uppercase(href="") Log Out
+                a.btn.btn-success(href="") Next

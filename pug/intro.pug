@@ -1,0 +1,44 @@
+extends layouts/_app
+
+block vars
+	-
+		setPage({
+			
+		});
+
+block pageTitle
+
+block pageHeader
+
+block content
+	.main.letter-spacing-sm
+		.container
+			.row
+				.col-lg-8.mx-auto.text-uppercase
+					h4.text-danger.mb-4 Create Your Adlantique Pay as you go Campaign
+
+					p.text-muted.mb-4 Want a little more control over your campaign setup? Creating your campaign manually is suitable if you:
+	
+					ul.ul.text-muted.small
+						li.mb-2 Have distinct sets of ads to show to different audiences.
+						li.mb-2 Want to target custom audiences.
+						li.mb-2 Want to schedule ads to run only during specific times.
+						li.mb-2 Have multiple performance goals.
+
+
+					.py-5
+					hr.mb-5
+					.text-right
+						a.btn.btn-success.text-uppercase.rounded-pill(href="javascript:") Get Started
+
+	include sections/modals/modal
+
+block js
+	script
+		|$(function() {
+		|	$(".modal").modal({
+		|		backdrop: 'static',
+		|		keyboard: false
+		|	});
+		|	$(".modal").modal('show');
+		|})

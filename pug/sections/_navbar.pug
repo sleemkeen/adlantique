@@ -1,9 +1,9 @@
-.navbar.navbar-expand-md(class=(page.transparentNavbar ? " navbar-trans" : ""))
+.navbar.navbar-expand-md(class=(page.transparentNavbar ? " navbar-trans" : "")+(page.fixedNavbar ? " fixed-top" : ""))
 	.container
 		a.navbar-brand(href="index.html") Adlantique
-		button.navbar-toggler
+		button.navbar-toggler(data-target="#nav" data-toggle="collapse")
 			span.navbar-toggler-icon
-		.navbar-collapse.collapse
+		.navbar-collapse.collapse#nav
 			ul.nav.navbar-nav.ml-auto
 				li.nav-item
 					a.nav-link(class=`${page.name == 'products' ? "active" : ""}`, href="products.html") Products

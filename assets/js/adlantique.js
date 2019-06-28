@@ -19,13 +19,6 @@ function getBackgroundSizes() {
 
 $(function() {
 
-	$(".fixed-navbar .navbar").css({
-		marginBottom: () => {
-			return -$(".fixed-navbar .navbar").outerHeight();
-		}
-	});
-
-
 	var hash = window.location.hash;
 	if (!!hash && $(".tab-pane").length) {
 		$(hash).tab("show");
@@ -38,14 +31,27 @@ $(function() {
 
 	getBackgroundSizes();
 
-	$(".select2").select2({
-		minimumResultsForSearch: -1,
-		templateResult: state => state.text
-	});
+	
+	if ($.fn.select2) {
+		$(".select2").select2({
+			minimumResultsForSearch: -1,
+			templateResult: state => state.text
+		});	
+	}
+	
 	
 
 });
 
 live("resize", function() {
 	getBackgroundSizes()
+});
+
+live("scroll resize", function() {
+	var navbar = $('.navbar');
+	if ($(window).scrollTop() > 30) {
+		navbar.addClass("navbar-sticky");
+	} else {
+		navbar.removeClass("navbar-sticky");
+	}
 });

@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="assets/css/main.css"/>
   </head>
   <body class="fixed-navbar">
-    <div class="navbar navbar-expand-md  navbar-trans">
+    <div class="navbar navbar-expand-md  navbar-trans fixed-top">
       <div class="container"><a class="navbar-brand" href="index.html">Adlantique</a>
-        <button class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
-        <div class="navbar-collapse collapse">
+        <button class="navbar-toggler" data-target="#nav" data-toggle="collapse"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse" id="nav">
           <ul class="nav navbar-nav ml-auto">
             <li class="nav-item"><a class="nav-link" href="products.html">Products</a></li>
             <li class="nav-item"><a class="nav-link active" href="about.html">About Us</a></li>
@@ -37,8 +37,8 @@
               <form class="font-size-10">
                 <div class="form-group">
                   <div class="input-group rounded-pill">
-                    <label class="mb-0 input-group-prepend" for="account"><span class="input-group-text border-0"><img src="assets/img/icons/exclamation.svg" alt="" width="15"/></span></label>
-                    <select class="custom-select text-center border-0" id="account">
+                    <label class="mb-0 input-group-prepend" for="account"><span class="input-group-text border-0 bg-white"><img src="assets/img/icons/exclamation.svg" alt="" width="15"/></span></label>
+                    <select class="custom-select select2 text-center border-0" id="account">
                       <option value="">Select Account Type</option>
                       <option value="">Pay As You Go</option>
                       <option value="">Adlantique For SME</option>
@@ -50,27 +50,13 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="">First Name</label>
+                      <label class="text-white" for="">First Name</label>
                       <input class="form-control rounded-pill border-0" type="text"/>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="">Last Name</label>
-                      <input class="form-control rounded-pill border-0" type="text"/>
-                    </div>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="">Email</label>
-                      <input class="form-control rounded-pill border-0" type="text"/>
-                    </div>
-                  </div>
-                  <div class="col-md-6">
-                    <div class="form-group">
-                      <label for="">Phone Number</label>
+                      <label class="text-white" for="">Last Name</label>
                       <input class="form-control rounded-pill border-0" type="text"/>
                     </div>
                   </div>
@@ -78,13 +64,27 @@
                 <div class="row">
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="">Password</label>
+                      <label class="text-white" for="">Email</label>
+                      <input class="form-control rounded-pill border-0" type="text"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="text-white" for="">Phone Number</label>
+                      <input class="form-control rounded-pill border-0" type="text"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label class="text-white" for="">Password</label>
                       <input class="form-control rounded-pill border-0" type="password"/>
                     </div>
                   </div>
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="">Confirm Password</label>
+                      <label class="text-white" for="">Confirm Password</label>
                       <input class="form-control rounded-pill border-0" type="password"/>
                     </div>
                   </div>

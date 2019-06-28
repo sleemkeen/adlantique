@@ -25,9 +25,9 @@ block content
 							.form-group
 								.input-group.rounded-pill
 									label.mb-0.input-group-prepend(for="account")
-										span.input-group-text.border-0
+										span.input-group-text.border-0.bg-white
 											img(src="assets/img/icons/exclamation.svg", alt="", width="15")
-									select#account.custom-select.text-center.border-0
+									select#account.custom-select.select2.text-center.border-0
 										option(value="") Select Account Type
 										option(value="") Pay As You Go
 										option(value="") Adlantique For SME
@@ -36,29 +36,29 @@ block content
 							.row
 								.col-md-6
 									.form-group
-										label(for="") First Name
+										label.text-white(for="") First Name
 										input.form-control.rounded-pill.border-0(type="text")
 								.col-md-6
 									.form-group
-										label(for="") Last Name
-										input.form-control.rounded-pill.border-0(type="text")
-							.row
-								.col-md-6
-									.form-group
-										label(for="") Email
-										input.form-control.rounded-pill.border-0(type="text")
-								.col-md-6
-									.form-group
-										label(for="") Phone Number
+										label.text-white(for="") Last Name
 										input.form-control.rounded-pill.border-0(type="text")
 							.row
 								.col-md-6
 									.form-group
-										label(for="") Password
+										label.text-white(for="") Email
+										input.form-control.rounded-pill.border-0(type="text")
+								.col-md-6
+									.form-group
+										label.text-white(for="") Phone Number
+										input.form-control.rounded-pill.border-0(type="text")
+							.row
+								.col-md-6
+									.form-group
+										label.text-white(for="") Password
 										input.form-control.rounded-pill.border-0(type="password")
 								.col-md-6
 									.form-group
-										label(for="") Confirm Password
+										label.text-white(for="") Confirm Password
 										input.form-control.rounded-pill.border-0(type="password")
 
 							p.py-2.text-center By submitting this form, you accept our Terms of Service.

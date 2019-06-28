@@ -20,9 +20,47 @@ block content
 		.row
 			.campaign-sidebar.col-md-3
 				.campaign-sidebar-header
-					.campaign-sidebar-button
+					img.campaign-sidebar-icon(src="assets/img/icons/plus-red.svg", alt="New Ad Group")
 					.campaign-sidebar-title Campaign Settings
 					button.btn.btn-outline-danger(type="button") New Ad Group
+				.campaign-sidebar-nav
+					ul.nav.flex-column
+						li.nav-item
+							a.nav-link(href="")
+								span.text Start customising your Ads.
+								span.small
+						li.nav-item
+							a.nav-link(href="#Facebook")
+								span.text Facebook Ad
+								span.small Edit your ad preference 
+						li.nav-item
+							a.nav-link(href="#Twitter")
+								span.text Twitter Ad
+								span.small Edit your ad preference 
+						li.nav-item
+							a.nav-link(href="#Instagram")
+								span.text Instagram Ad
+								span.small Edit your ad preference 
+						li.nav-item
+							a.nav-link(href="#LinkedIn")
+								span.text LinkedIn Ad
+								span.small Edit your ad preference 
+						li.nav-item
+							a.nav-link(href="#Google")
+								span.text Google Ad
+								span.small Edit your ad preference 
+						li.nav-item
+							a.nav-link(href="#Email")
+								span.text Email Marketing Ad
+								span.small Edit your ad preference 
+						li.nav-item
+							a.nav-link(href="#Bulk")
+								span.text Bulk Sms Ad
+								span.small Edit your ad preference 
+						li.nav-item
+							a.nav-link(href="#Outdoor")
+								span.text Outdoor Ad
+								span.small Edit your ad preference 
 			.main.main-a.col-md-9
 				h3.font-weight-normal Campaign Settings
 
@@ -55,51 +93,236 @@ block content
 										.chip
 											span.text #{medium.name}
 											span.close &times;
+					each medium in ['Facebook', 'Twitter', 'Instagram', 'LinkedIn', 'Google']
+						-;
+						.form-section
+							.mb-5
+								span.h3.font-weight-normal.text-danger.mr-2 #{medium} Ad
+								small AdGroup 1
+
+							.col-auto.pl-0.mb-4
+								.form-group
+									label Start and End Dates
+									.input-group.duration-group
+										select.custom-select.form-control
+											option(value="") Immediately
+										input.form-control.date-picker
+										select.custom-select.form-control
+											option(value="") No end date
+										input.form-control.date-picker
+
+							
+							h5.font-weight-300 Budget
+							.row.justify-content-between
+								.col-auto
+									p Select how much you would like to spend daily.
+								.col-auto
+									p Your Total Spend is 
+										b.font-weight-bold ₦100 
+										| over 
+										b.font-weight-bold 1 day
+
+							.form-group
+								label.text-danger(for="amount")
+								input#amount.custom-range(type="range", name="", value="0")
+							.form-group
+								label.text-danger(for="frequency")
+								input#frequemcy.custom-range(type="range", name="", value="0")
+
+							h5.font-weight-300.mb-4 Audience
+
+							.row
+								.col-md-6
+									p.text-muted Locations
+									.form-group
+										.custom-control.custom-switch
+											input.custom-control-input(type="checkbox", name="", id=`${medium}-target-location`)
+											label.custom-control-label(for=`${medium}-target-location`) Manually target the best location (Recommended)
+									.form-group
+										.input-group
+											input.form-control(type="text")
+											span.input-group-append
+												span.input-group-text.bg-transparent
+													span.custom-control.custom-switch
+														input.custom-control-input(type="checkbox", name="", id=`${medium}-include-locations`)
+														label.custom-control-label(for=`${medium}-include-locations`) including
+
+								.col-md-6
+									p.text-muted Age Group
+									.form-group
+										.custom-control.custom-switch
+											input.custom-control-input(type="checkbox", name="", id=`${medium}-target-age-group`)
+											label.custom-control-label(for=`${medium}-target-age-group`) Manually target the best age-group (Recommended)
+									.form-group
+										.input-group
+											input.form-control(type="text")
+											span.input-group-append
+												span.input-group-text.bg-transparent
+													span.custom-control.custom-switch
+														input.custom-control-input(type="checkbox", name="", id=`${medium}-include-age-group`)
+														label.custom-control-label(for=`${medium}-include-age-group`) including
+
+								.col-md-6
+									.form-group
+										label(for="") Title
+										input.form-control(type="text")
+									.form-group
+										label(for="") Description
+										textarea.form-control(type="text")
+									.form-group
+										label(for="") Destination URL
+										input.form-control(type="text")
+
+								.col-md-6
+									.form-group
+										label Background Image
+										.file2
+											input.file2-input(type="file", name="", id=`${medium}-file2`)
+											label.file2-label(for=`${medium}-file2`) Image
+									
+									.form-group
+										label(for="") Call To Action
+										select.custom-select.select2(name="")
+											option(value="") Learn More
+
+
+
 					.form-section
+
 						.mb-5
-							span.h3.font-weight-normal.text-danger.mr-2 Facebook Ad
+							span.h3.font-weight-normal.text-danger.mr-2 Email Marketing
 							small AdGroup 1
 
-						.col-auto.pl-0.form-inline.mb-4
-							.form-group
-								.input-group
-									select.custom-select.form-control
-										option(value="") Immediately
-									input.form-control.date-picker
-									select.custom-select.form-control
-										option(value="") No end date
-									input.form-control.date-picker
+						.row
+							.col-md-5
+								.form-group
+									label(for="") Subject
+									input.form-control(type="text")
+								.form-group
+									label(for="") Description
+									textarea.form-control(type="text")
+								.form-group
+									label(for="") Destination URL
+									input.form-control(type="text")
 
-						
-						h5.font-weight-300 Budget
-						.row.justify-content-between
+							.col-md-4
+								.form-group
+									label Background Image
+									.file2
+										input.file2-input(type="file", name="", id=`${medium}-file2`)
+										label.file2-label(for=`${medium}-file2`) Image
+								
+								.form-group
+									label(for="") Call To Action
+									select.custom-select.select2(name="")
+										option(value="") Learn More
+							
+								.form-group
+									label(for="") How much would you like to spend?
+									input.form-control(name="", placeholder="₦ 100")
+							
+							.col-md-3
+								.form-group
+									img.img-fluid(src="assets/img/screens/preview.svg")
+							
 							.col-auto
-								p Select how much you would like to spend daily.
-							.col-auto
-								p Your Total Spend is 
-									b.font-weight-bold ₦100 
-									| over 
-									b.font-weight-bold 1 day
+								.form-group
+									label Start and End Dates
+									.input-group.duration-group
+										select.custom-select.form-control
+											option(value="") Immediately
+										input.form-control.date-picker
+										select.custom-select.form-control
+											option(value="") No end date
+										input.form-control.date-picker
 
-						.form-group
-							label.text-danger(for="amount")
-							input#amount.custom-range(type="range", name="", value="0")
-						.form-group
-							label.text-danger(for="frequency")
-							input#frequemcy.custom-range(type="range", name="", value="0")
+					.form-section
 
-						h5.font-weight-300.mb-4 Audience
+						.mb-5
+							span.h3.font-weight-normal.text-danger.mr-2 Bulk Sms
+							small AdGroup 1
 
 						.row
 							.col-md-6
 								.form-group
-									.custom-control.custom-switch
-										input#target-location.custom-control-input(type="checkbox", name="")
-										label.custom-control-label(for="target-location") Manually target the best location (Recommended)
-								.form-group
-									label(for="")
+									label(for="") Title
 									input.form-control(type="text")
+								.form-group
+									label(for="") Description
+									textarea.form-control(type="text")
 
 							.col-md-6
-							.col-md-6
+								.form-group
+									label Start and End Dates
+									.input-group.duration-group
+										select.custom-select.form-control
+											option(value="") Immediately
+										input.form-control.date-picker
+										select.custom-select.form-control
+											option(value="") No end date
+										input.form-control.date-picker
 
+								.form-group
+									label(for="") How much would you like to spend?
+									input.form-control(name="", placeholder="₦ 100")
+							
+						.row
+							.col-md-6
+								.form-group
+									label(for="network") Preffered Network
+									select.form-control.select2#network
+										option(value="") Select your Preffered Network
+										for medium in mediums
+											-;
+											option(value=medium.name) #{medium.name}
+							.col-md-6
+								.form-group
+									label(for="") Targeted Numbers
+									input.form-control(type="text", placeholder="i.e +2348104558957, +2348104558957")
+					
+					.form-section
+						.mb-5
+							span.h3.font-weight-normal.text-danger.mr-2 Outdoor Ad
+							small AdGroup 1
+						
+						.row
+							.col-md-6
+								.form-group
+									label(for="") Location
+									select.form-control.select2
+										option(value="") Select prefered location
+
+							.col-md-6
+								.form-group
+									label Start and End Dates
+									.input-group.duration-group
+										select.custom-select.form-control
+											option(value="") Immediately
+										input.form-control.date-picker
+										select.custom-select.form-control
+											option(value="") No end date
+										input.form-control.date-picker
+							
+							.col-md-6
+								.form-group
+									label(for="") Select Available Dimensions
+									select.form-control.select2
+										option(value="") Select Dimensions
+								
+								
+								.form-group
+									label(for="") How much would you like to spend?
+									input.form-control(type="text", placeholder="₦  100")
+							
+							.col-md-6
+								.upload-creative
+									input#upload-creative.upload-creative-input(type="file", name="")
+									label.upload-creative-label(for="upload-creative")
+								
+								p.font-weight-bolf.text-muted Upload Creative
+								p Already have finished Ads? Upload them here.
+
+					.p-4.text-center.bg-light
+						button.btn.btn-success.rounded-pill.btn-sm(type="submit") Pay
+
+	//- include sections/modals/modal

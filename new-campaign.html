@@ -36,10 +36,22 @@
     <div class="container-fluid">
       <div class="row">
         <div class="campaign-sidebar col-md-3">
-          <div class="campaign-sidebar-header">
-            <div class="campaign-sidebar-button"></div>
+          <div class="campaign-sidebar-header"><img class="campaign-sidebar-icon" src="assets/img/icons/plus-red.svg" alt="New Ad Group"/>
             <div class="campaign-sidebar-title">Campaign Settings</div>
             <button class="btn btn-outline-danger" type="button">New Ad Group</button>
+          </div>
+          <div class="campaign-sidebar-nav">
+            <ul class="nav flex-column">
+              <li class="nav-item"><a class="nav-link" href=""><span class="text">Start customising your Ads.</span><span class="small"></span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#Facebook"><span class="text">Facebook Ad</span><span class="small">Edit your ad preference </span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#Twitter"><span class="text">Twitter Ad</span><span class="small">Edit your ad preference </span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#Instagram"><span class="text">Instagram Ad</span><span class="small">Edit your ad preference </span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#LinkedIn"><span class="text">LinkedIn Ad</span><span class="small">Edit your ad preference </span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#Google"><span class="text">Google Ad</span><span class="small">Edit your ad preference </span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#Email"><span class="text">Email Marketing Ad</span><span class="small">Edit your ad preference </span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#Bulk"><span class="text">Bulk Sms Ad</span><span class="small">Edit your ad preference </span></a></li>
+              <li class="nav-item"><a class="nav-link" href="#Outdoor"><span class="text">Outdoor Ad</span><span class="small">Edit your ad preference </span></a></li>
+            </ul>
           </div>
         </div>
         <div class="main main-a col-md-9">
@@ -97,9 +109,10 @@
             </div>
             <div class="form-section">
               <div class="mb-5"><span class="h3 font-weight-normal text-danger mr-2">Facebook Ad</span><small>AdGroup 1</small></div>
-              <div class="col-auto pl-0 form-inline mb-4">
+              <div class="col-auto pl-0 mb-4">
                 <div class="form-group">
-                  <div class="input-group">
+                  <label>Start and End Dates</label>
+                  <div class="input-group duration-group">
                     <select class="custom-select form-control">
                       <option value="">Immediately</option>
                     </select>
@@ -131,20 +144,631 @@
               <h5 class="font-weight-300 mb-4">Audience</h5>
               <div class="row">
                 <div class="col-md-6">
+                  <p class="text-muted">Locations</p>
                   <div class="form-group">
                     <div class="custom-control custom-switch">
-                      <input class="custom-control-input" id="target-location" type="checkbox" name=""/>
-                      <label class="custom-control-label" for="target-location">Manually target the best location (Recommended)</label>
+                      <input class="custom-control-input" type="checkbox" name="" id="Facebook-target-location"/>
+                      <label class="custom-control-label" for="Facebook-target-location">Manually target the best location (Recommended)</label>
                     </div>
                   </div>
                   <div class="form-group">
-                    <label for=""></label>
+                    <div class="input-group">
+                      <input class="form-control" type="text"/><span class="input-group-append"><span class="input-group-text bg-transparent"><span class="custom-control custom-switch">
+                            <input class="custom-control-input" type="checkbox" name="" id="Facebook-include-locations"/>
+                            <label class="custom-control-label" for="Facebook-include-locations">including</label></span></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <p class="text-muted">Age Group</p>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input class="custom-control-input" type="checkbox" name="" id="Facebook-target-age-group"/>
+                      <label class="custom-control-label" for="Facebook-target-age-group">Manually target the best age-group (Recommended)</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="text"/><span class="input-group-append"><span class="input-group-text bg-transparent"><span class="custom-control custom-switch">
+                            <input class="custom-control-input" type="checkbox" name="" id="Facebook-include-age-group"/>
+                            <label class="custom-control-label" for="Facebook-include-age-group">including</label></span></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Title</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea class="form-control" type="text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Destination URL</label>
                     <input class="form-control" type="text"/>
                   </div>
                 </div>
-                <div class="col-md-6"></div>
-                <div class="col-md-6"></div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Background Image</label>
+                    <div class="file2">
+                      <input class="file2-input" type="file" name="" id="Facebook-file2"/>
+                      <label class="file2-label" for="Facebook-file2">Image</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Call To Action</label>
+                    <select class="custom-select select2" name="">
+                      <option value="">Learn More</option>
+                    </select>
+                  </div>
+                </div>
               </div>
+            </div>
+            <div class="form-section">
+              <div class="mb-5"><span class="h3 font-weight-normal text-danger mr-2">Twitter Ad</span><small>AdGroup 1</small></div>
+              <div class="col-auto pl-0 mb-4">
+                <div class="form-group">
+                  <label>Start and End Dates</label>
+                  <div class="input-group duration-group">
+                    <select class="custom-select form-control">
+                      <option value="">Immediately</option>
+                    </select>
+                    <input class="form-control date-picker"/>
+                    <select class="custom-select form-control">
+                      <option value="">No end date</option>
+                    </select>
+                    <input class="form-control date-picker"/>
+                  </div>
+                </div>
+              </div>
+              <h5 class="font-weight-300">Budget</h5>
+              <div class="row justify-content-between">
+                <div class="col-auto">
+                  <p>Select how much you would like to spend daily.</p>
+                </div>
+                <div class="col-auto">
+                  <p>Your Total Spend is <b class="font-weight-bold">₦100 </b>over <b class="font-weight-bold">1 day</b></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="text-danger" for="amount"></label>
+                <input class="custom-range" id="amount" type="range" name="" value="0"/>
+              </div>
+              <div class="form-group">
+                <label class="text-danger" for="frequency"></label>
+                <input class="custom-range" id="frequemcy" type="range" name="" value="0"/>
+              </div>
+              <h5 class="font-weight-300 mb-4">Audience</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="text-muted">Locations</p>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input class="custom-control-input" type="checkbox" name="" id="Twitter-target-location"/>
+                      <label class="custom-control-label" for="Twitter-target-location">Manually target the best location (Recommended)</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="text"/><span class="input-group-append"><span class="input-group-text bg-transparent"><span class="custom-control custom-switch">
+                            <input class="custom-control-input" type="checkbox" name="" id="Twitter-include-locations"/>
+                            <label class="custom-control-label" for="Twitter-include-locations">including</label></span></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <p class="text-muted">Age Group</p>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input class="custom-control-input" type="checkbox" name="" id="Twitter-target-age-group"/>
+                      <label class="custom-control-label" for="Twitter-target-age-group">Manually target the best age-group (Recommended)</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="text"/><span class="input-group-append"><span class="input-group-text bg-transparent"><span class="custom-control custom-switch">
+                            <input class="custom-control-input" type="checkbox" name="" id="Twitter-include-age-group"/>
+                            <label class="custom-control-label" for="Twitter-include-age-group">including</label></span></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Title</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea class="form-control" type="text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Destination URL</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Background Image</label>
+                    <div class="file2">
+                      <input class="file2-input" type="file" name="" id="Twitter-file2"/>
+                      <label class="file2-label" for="Twitter-file2">Image</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Call To Action</label>
+                    <select class="custom-select select2" name="">
+                      <option value="">Learn More</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="mb-5"><span class="h3 font-weight-normal text-danger mr-2">Instagram Ad</span><small>AdGroup 1</small></div>
+              <div class="col-auto pl-0 mb-4">
+                <div class="form-group">
+                  <label>Start and End Dates</label>
+                  <div class="input-group duration-group">
+                    <select class="custom-select form-control">
+                      <option value="">Immediately</option>
+                    </select>
+                    <input class="form-control date-picker"/>
+                    <select class="custom-select form-control">
+                      <option value="">No end date</option>
+                    </select>
+                    <input class="form-control date-picker"/>
+                  </div>
+                </div>
+              </div>
+              <h5 class="font-weight-300">Budget</h5>
+              <div class="row justify-content-between">
+                <div class="col-auto">
+                  <p>Select how much you would like to spend daily.</p>
+                </div>
+                <div class="col-auto">
+                  <p>Your Total Spend is <b class="font-weight-bold">₦100 </b>over <b class="font-weight-bold">1 day</b></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="text-danger" for="amount"></label>
+                <input class="custom-range" id="amount" type="range" name="" value="0"/>
+              </div>
+              <div class="form-group">
+                <label class="text-danger" for="frequency"></label>
+                <input class="custom-range" id="frequemcy" type="range" name="" value="0"/>
+              </div>
+              <h5 class="font-weight-300 mb-4">Audience</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="text-muted">Locations</p>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input class="custom-control-input" type="checkbox" name="" id="Instagram-target-location"/>
+                      <label class="custom-control-label" for="Instagram-target-location">Manually target the best location (Recommended)</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="text"/><span class="input-group-append"><span class="input-group-text bg-transparent"><span class="custom-control custom-switch">
+                            <input class="custom-control-input" type="checkbox" name="" id="Instagram-include-locations"/>
+                            <label class="custom-control-label" for="Instagram-include-locations">including</label></span></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <p class="text-muted">Age Group</p>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input class="custom-control-input" type="checkbox" name="" id="Instagram-target-age-group"/>
+                      <label class="custom-control-label" for="Instagram-target-age-group">Manually target the best age-group (Recommended)</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="text"/><span class="input-group-append"><span class="input-group-text bg-transparent"><span class="custom-control custom-switch">
+                            <input class="custom-control-input" type="checkbox" name="" id="Instagram-include-age-group"/>
+                            <label class="custom-control-label" for="Instagram-include-age-group">including</label></span></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Title</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea class="form-control" type="text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Destination URL</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Background Image</label>
+                    <div class="file2">
+                      <input class="file2-input" type="file" name="" id="Instagram-file2"/>
+                      <label class="file2-label" for="Instagram-file2">Image</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Call To Action</label>
+                    <select class="custom-select select2" name="">
+                      <option value="">Learn More</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="mb-5"><span class="h3 font-weight-normal text-danger mr-2">LinkedIn Ad</span><small>AdGroup 1</small></div>
+              <div class="col-auto pl-0 mb-4">
+                <div class="form-group">
+                  <label>Start and End Dates</label>
+                  <div class="input-group duration-group">
+                    <select class="custom-select form-control">
+                      <option value="">Immediately</option>
+                    </select>
+                    <input class="form-control date-picker"/>
+                    <select class="custom-select form-control">
+                      <option value="">No end date</option>
+                    </select>
+                    <input class="form-control date-picker"/>
+                  </div>
+                </div>
+              </div>
+              <h5 class="font-weight-300">Budget</h5>
+              <div class="row justify-content-between">
+                <div class="col-auto">
+                  <p>Select how much you would like to spend daily.</p>
+                </div>
+                <div class="col-auto">
+                  <p>Your Total Spend is <b class="font-weight-bold">₦100 </b>over <b class="font-weight-bold">1 day</b></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="text-danger" for="amount"></label>
+                <input class="custom-range" id="amount" type="range" name="" value="0"/>
+              </div>
+              <div class="form-group">
+                <label class="text-danger" for="frequency"></label>
+                <input class="custom-range" id="frequemcy" type="range" name="" value="0"/>
+              </div>
+              <h5 class="font-weight-300 mb-4">Audience</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="text-muted">Locations</p>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input class="custom-control-input" type="checkbox" name="" id="LinkedIn-target-location"/>
+                      <label class="custom-control-label" for="LinkedIn-target-location">Manually target the best location (Recommended)</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="text"/><span class="input-group-append"><span class="input-group-text bg-transparent"><span class="custom-control custom-switch">
+                            <input class="custom-control-input" type="checkbox" name="" id="LinkedIn-include-locations"/>
+                            <label class="custom-control-label" for="LinkedIn-include-locations">including</label></span></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <p class="text-muted">Age Group</p>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input class="custom-control-input" type="checkbox" name="" id="LinkedIn-target-age-group"/>
+                      <label class="custom-control-label" for="LinkedIn-target-age-group">Manually target the best age-group (Recommended)</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="text"/><span class="input-group-append"><span class="input-group-text bg-transparent"><span class="custom-control custom-switch">
+                            <input class="custom-control-input" type="checkbox" name="" id="LinkedIn-include-age-group"/>
+                            <label class="custom-control-label" for="LinkedIn-include-age-group">including</label></span></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Title</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea class="form-control" type="text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Destination URL</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Background Image</label>
+                    <div class="file2">
+                      <input class="file2-input" type="file" name="" id="LinkedIn-file2"/>
+                      <label class="file2-label" for="LinkedIn-file2">Image</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Call To Action</label>
+                    <select class="custom-select select2" name="">
+                      <option value="">Learn More</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="mb-5"><span class="h3 font-weight-normal text-danger mr-2">Google Ad</span><small>AdGroup 1</small></div>
+              <div class="col-auto pl-0 mb-4">
+                <div class="form-group">
+                  <label>Start and End Dates</label>
+                  <div class="input-group duration-group">
+                    <select class="custom-select form-control">
+                      <option value="">Immediately</option>
+                    </select>
+                    <input class="form-control date-picker"/>
+                    <select class="custom-select form-control">
+                      <option value="">No end date</option>
+                    </select>
+                    <input class="form-control date-picker"/>
+                  </div>
+                </div>
+              </div>
+              <h5 class="font-weight-300">Budget</h5>
+              <div class="row justify-content-between">
+                <div class="col-auto">
+                  <p>Select how much you would like to spend daily.</p>
+                </div>
+                <div class="col-auto">
+                  <p>Your Total Spend is <b class="font-weight-bold">₦100 </b>over <b class="font-weight-bold">1 day</b></p>
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="text-danger" for="amount"></label>
+                <input class="custom-range" id="amount" type="range" name="" value="0"/>
+              </div>
+              <div class="form-group">
+                <label class="text-danger" for="frequency"></label>
+                <input class="custom-range" id="frequemcy" type="range" name="" value="0"/>
+              </div>
+              <h5 class="font-weight-300 mb-4">Audience</h5>
+              <div class="row">
+                <div class="col-md-6">
+                  <p class="text-muted">Locations</p>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input class="custom-control-input" type="checkbox" name="" id="Google-target-location"/>
+                      <label class="custom-control-label" for="Google-target-location">Manually target the best location (Recommended)</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="text"/><span class="input-group-append"><span class="input-group-text bg-transparent"><span class="custom-control custom-switch">
+                            <input class="custom-control-input" type="checkbox" name="" id="Google-include-locations"/>
+                            <label class="custom-control-label" for="Google-include-locations">including</label></span></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <p class="text-muted">Age Group</p>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input class="custom-control-input" type="checkbox" name="" id="Google-target-age-group"/>
+                      <label class="custom-control-label" for="Google-target-age-group">Manually target the best age-group (Recommended)</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="input-group">
+                      <input class="form-control" type="text"/><span class="input-group-append"><span class="input-group-text bg-transparent"><span class="custom-control custom-switch">
+                            <input class="custom-control-input" type="checkbox" name="" id="Google-include-age-group"/>
+                            <label class="custom-control-label" for="Google-include-age-group">including</label></span></span></span>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Title</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea class="form-control" type="text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Destination URL</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Background Image</label>
+                    <div class="file2">
+                      <input class="file2-input" type="file" name="" id="Google-file2"/>
+                      <label class="file2-label" for="Google-file2">Image</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Call To Action</label>
+                    <select class="custom-select select2" name="">
+                      <option value="">Learn More</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="mb-5"><span class="h3 font-weight-normal text-danger mr-2">Email Marketing</span><small>AdGroup 1</small></div>
+              <div class="row">
+                <div class="col-md-5">
+                  <div class="form-group">
+                    <label for="">Subject</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea class="form-control" type="text"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Destination URL</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="form-group">
+                    <label>Background Image</label>
+                    <div class="file2">
+                      <input class="file2-input" type="file" name="" id="undefined-file2"/>
+                      <label class="file2-label" for="undefined-file2">Image</label>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Call To Action</label>
+                    <select class="custom-select select2" name="">
+                      <option value="">Learn More</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="">How much would you like to spend?</label>
+                    <input class="form-control" name="" placeholder="₦ 100"/>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group"><img class="img-fluid" src="assets/img/screens/preview.svg"/></div>
+                </div>
+                <div class="col-auto">
+                  <div class="form-group">
+                    <label>Start and End Dates</label>
+                    <div class="input-group duration-group">
+                      <select class="custom-select form-control">
+                        <option value="">Immediately</option>
+                      </select>
+                      <input class="form-control date-picker"/>
+                      <select class="custom-select form-control">
+                        <option value="">No end date</option>
+                      </select>
+                      <input class="form-control date-picker"/>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="mb-5"><span class="h3 font-weight-normal text-danger mr-2">Bulk Sms</span><small>AdGroup 1</small></div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Title</label>
+                    <input class="form-control" type="text"/>
+                  </div>
+                  <div class="form-group">
+                    <label for="">Description</label>
+                    <textarea class="form-control" type="text"></textarea>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Start and End Dates</label>
+                    <div class="input-group duration-group">
+                      <select class="custom-select form-control">
+                        <option value="">Immediately</option>
+                      </select>
+                      <input class="form-control date-picker"/>
+                      <select class="custom-select form-control">
+                        <option value="">No end date</option>
+                      </select>
+                      <input class="form-control date-picker"/>
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label for="">How much would you like to spend?</label>
+                    <input class="form-control" name="" placeholder="₦ 100"/>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="network">Preffered Network</label>
+                    <select class="form-control select2" id="network">
+                      <option value="">Select your Preffered Network</option>
+                      <option value="Facebook">Facebook</option>
+                      <option value="Instagram">Instagram</option>
+                      <option value="Twitter">Twitter</option>
+                      <option value="LinkedIn">LinkedIn</option>
+                      <option value="Google Ad">Google Ad</option>
+                      <option value="Newsletters">Newsletters</option>
+                      <option value="Outdoor Ad">Outdoor Ad</option>
+                      <option value="Bulk Sms">Bulk Sms</option>
+                      <option value="Tv">Tv</option>
+                      <option value="Radio">Radio</option>
+                      <option value="Print">Print</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Targeted Numbers</label>
+                    <input class="form-control" type="text" placeholder="i.e +2348104558957, +2348104558957"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form-section">
+              <div class="mb-5"><span class="h3 font-weight-normal text-danger mr-2">Outdoor Ad</span><small>AdGroup 1</small></div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Location</label>
+                    <select class="form-control select2">
+                      <option value="">Select prefered location</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label>Start and End Dates</label>
+                    <div class="input-group duration-group">
+                      <select class="custom-select form-control">
+                        <option value="">Immediately</option>
+                      </select>
+                      <input class="form-control date-picker"/>
+                      <select class="custom-select form-control">
+                        <option value="">No end date</option>
+                      </select>
+                      <input class="form-control date-picker"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Select Available Dimensions</label>
+                    <select class="form-control select2">
+                      <option value="">Select Dimensions</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label for="">How much would you like to spend?</label>
+                    <input class="form-control" type="text" placeholder="₦  100"/>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="upload-creative">
+                    <input class="upload-creative-input" id="upload-creative" type="file" name=""/>
+                    <label class="upload-creative-label" for="upload-creative"></label>
+                  </div>
+                  <p class="font-weight-bolf text-muted">Upload Creative</p>
+                  <p>Already have finished Ads? Upload them here.</p>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 text-center bg-light">
+              <button class="btn btn-success rounded-pill btn-sm" type="submit">Pay</button>
             </div>
           </form>
         </div>

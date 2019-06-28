@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Adlantique</title>
+    <link rel="stylesheet" href="./vendors/select2/css/select2.min.css"/>
+    <link rel="stylesheet" href="assets/css/main.css"/>
+  </head>
+  <body id="app">
+    <div class="navbar navbar-expand-md">
+      <div class="container-fluid app-container"><a class="navbar-brand" href="">Adlantique</a>
+        <button class="navbar-toggler"><span class="navbar-toggler-icon"></span></button>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav ml-md-5">
+            <li class="nav-item"><a class="nav-link" href="campaigns.html">Campaigns</a></li>
+            <li class="nav-item"><a class="nav-link" href="my-ads.html">My Ads</a></li>
+            <li class="nav-item"><a class="nav-link" href="reports.html">Reports</a></li>
+          </ul>
+          <ul class="nav navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="">Hi Adeyemi,</a></li>
+            <li class="nav-item"><a class="nav-link nav-link-icon" href="javscript:"><img class="icon" src="assets/img/icons/bell.svg" alt="" width="30"/></a></li>
+            <li class="nav-item"><a class="nav-link nav-link-icon" href="settings.html"><img class="icon" src="assets/img/icons/cog.svg" alt="" width="30"/></a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="page-header app-container">
+      <div class="page-title">
+      </div>
+      <div class="page-header-text">
+      </div>
+    </div>
+    <div class="main letter-spacing-sm">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 mx-auto text-uppercase">
+            <h4 class="text-danger mb-4">Create Your Adlantique Pay as you go Campaign</h4>
+            <p class="text-muted mb-4">Want a little more control over your campaign setup? Creating your campaign manually is suitable if you:</p>
+            <ul class="ul text-muted small">
+              <li class="mb-2">Have distinct sets of ads to show to different audiences.</li>
+              <li class="mb-2">Want to target custom audiences.</li>
+              <li class="mb-2">Want to schedule ads to run only during specific times.</li>
+              <li class="mb-2">Have multiple performance goals.</li>
+            </ul>
+            <div class="py-5"></div>
+            <hr class="mb-5"/>
+            <div class="text-right"><a class="btn btn-success text-uppercase rounded-pill" href="javascript:">Get Started</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal setip-modal fade">
+      <div class="modal-dialog">
+        <div class="alert alert-danger text-center">Welcome, kindly fill the forms below to setup a company</div>
+        <div class="modal-content">
+          <div class="modal-body tab-content">
+            <div class="modal-nav mb-4">
+              <ul class="nav nav-pills nav-fill">
+                <li class="nav-item"><a class="nav-link active" href="#company" data-toggle="tab">Company Profile</a></li>
+                <li class="nav-item"><a class="nav-link" href="#audience" data-toggle="tab">Target Audience</a></li>
+              </ul>
+            </div>
+            <div class="tab-pane fade active show" id="company">
+              <form>
+                <label>Agent Name</label>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input class="form-control" type="text" placeholder="First Name"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <input class="form-control" type="text" placeholder="Last Name"/>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Size of organization</label>
+                      <select class="select2 custom-select d-block form-control" style="width: 100%">
+                        <option value="">0-50</option>
+                        <option value="">50-100</option>
+                        <option value="">100-150</option>
+                        <option value="">200-500</option>
+                        <option value="">500+</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="">Email</label>
+                      <input class="form-control" type="email" placeholder="Holar******@gmail.com"/>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="tab-pane fade" id="audience">
+              <form>
+                <label>Select Target Audience</label>
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Locations</label>
+                      <input class="form-control" type="text"/>
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label>Age Group</label>
+                      <select class="select2 custom-select d-block form-control" style="width: 100%">
+                        <option value="">Select catergory</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer"><a class="btn btn-link text-uppercase" href="">Log Out</a><a class="btn btn-success" href="">Next</a></div>
+        </div>
+      </div>
+    </div>
+    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="vendors/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/adlantique-dist.js"></script>
+    <script src="./vendors/select2/js/select2.min.js"></script>
+    <script>
+      $(function() {
+      	$(".modal").modal({
+      		backdrop: 'static',
+      		keyboard: false
+      	});
+      	$(".modal").modal('show');
+      })
+    </script>
+  </body>
+</html>
